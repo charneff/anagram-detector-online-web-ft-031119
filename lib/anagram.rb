@@ -1,27 +1,14 @@
 class Anagram
-  attr_accessor :word 
-  
-  def initialize(word)
-    @word = word 
-    @anagrams = []
-  end
-  
-  def match(string)
-    string.each do |anagram|
-      if anagram.split("").sort == @word.split("").sort
-        @anagrams << anagram
-      end
-    end 
-  end
-end
-  
-  # def match(string)
-  #   string.each do |anagram|
-  #     if anagram.split("").sort == @word.split("").sort
-  #       @anagrams << anagram 
-  #     end
-  #   end
-  # return @anagrams 
-  # end
 
+  attr_accessor :name
+
+  def initialize(word)
+    @name = word 
+  end   
+
+  def match(array)
+    array.select {|x| x.split("").sort == @name.split("").sort}
+  end   
+
+end 
 # Your code goes here!
