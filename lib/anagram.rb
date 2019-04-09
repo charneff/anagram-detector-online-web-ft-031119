@@ -7,6 +7,9 @@ class Anagram
   end
   
   def match(string)
+    string.each do |anagram|
+      @anagrams << anagram
+    end
   
   end
 end
